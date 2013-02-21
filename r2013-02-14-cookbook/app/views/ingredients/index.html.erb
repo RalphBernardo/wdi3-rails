@@ -1,0 +1,17 @@
+<ol>
+  <% @ingredients.each do |ingredient| %>
+    <div class="container">
+      <li>
+        <ul>
+          <li><%= link_to(ingredient.title, @ingredient) %></li>
+          <br>
+          <li><%= ingredient.measurement %></li>
+          <br>
+          <li><%= ingredient.cost %></li>
+          <br>
+          <li><%= image_tag(ingredient.image) %></li>
+        </ul>
+      </li>
+    </div>
+  <% end %>
+</ol>

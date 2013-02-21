@@ -1,0 +1,41 @@
+.clearfix {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+
+ul,li {
+  list-style: none;
+}
+
+.container {
+  border: 1px solid black;
+  float: left;
+  padding: 20px;
+  margin: 20px;
+}
+
+body {
+  padding: 20px;
+}
+
+.container ul li h3 {
+  font-weight: bold;
+  font-size: 1.1em;
+}

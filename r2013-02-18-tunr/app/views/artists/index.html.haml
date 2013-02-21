@@ -1,0 +1,11 @@
+%table
+  - if @auth.is_admin?
+    %tr=link_to('Add Artist', new_artist_path, :class => 'blue button')
+    - @artists.each do |artist|
+      %tr
+        %td=artist.name
+        %td=link_to('Edit', edit_artist_path(artist), :class => 'blue button')
+  - else
+    - @artists.each do |artist|
+      %tr
+        %td=artist.name

@@ -1,0 +1,8 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: r2013-02-15-twilio_development
+  localhost:
+  pool: 5
+  username: ralph666
+  password:

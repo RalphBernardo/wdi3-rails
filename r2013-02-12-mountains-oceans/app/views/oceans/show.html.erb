@@ -1,0 +1,11 @@
+This is the SHOW OCEAN page.
+<br><br>
+
+<strong><%= @ocean.name %> Ocean</strong>
+<br><br>
+<strong>Total Area (sq mi):</strong> <%= @ocean.total_area %> |
+<strong>Max Depth (ft):</strong> <%= @ocean.max_depth %> |
+<strong>Percent of Earth:</strong> <%= @ocean.percent_of_earth %> |
+<strong>Etymology:</strong> <%= @ocean.etymology %>
+<br><br>
+<%= image_tag(@ocean.image) %>

@@ -1,0 +1,18 @@
+<div class="container">
+  <%= link_to(@recipe.title, @recipe) %>
+  <br><br>
+  <%= @recipe.course  %>
+  <br><br>
+  <%= @recipe.cooktime %>
+  <br><br>
+  <%= @recipe.serving_size %>
+  <br><br>
+  <%= @recipe.instructions %>
+  <br><br>
+  <%= image_tag(@recipe.image) %>
+  <br><br>
+  <%= button_to('Delete', @recipe, :method => :delete, :confirm => 'Can Haz Destroy Ingredient?') %>
+  <%= button_to('Edit', edit_recipe_path(@recipe), :method => :get) %>
+  </div>
+  <br><br>
+<% end %>

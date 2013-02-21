@@ -1,0 +1,17 @@
+This is the SHOW ARTIST page.
+<br><br>
+
+<%= @artist.name %>
+<br><br>
+<%= image_tag(@artist.image) %>
+<br><br>
+<% @artist.paintings.each do |painting| %>
+  <%= painting.title %>
+  <br><br>
+  <%= image_tag(painting.image) %>
+  <br><br>
+<% end %>
+<br><br>
+<%= link_to('Delete', @artist, :method => :delete, :confirm => 'Can Haz Murder Artist?') %>
+<br><br>
+<%= link_to('Edit', edit_artist_path(@artist)) %>

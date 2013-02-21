@@ -1,0 +1,8 @@
+.row
+  .five.columns
+    = form_for @genre do |f|
+      = f.label :name, :autofocus => true
+      = f.text_field :name
+      = f.submit nil, :class => 'button radius'
+
+  .seven.columns

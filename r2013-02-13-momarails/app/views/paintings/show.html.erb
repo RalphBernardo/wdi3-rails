@@ -1,0 +1,8 @@
+This is the SHOW PAINTING page.
+<br><br>
+
+<%= @painting.title %>
+<br><br>
+<%= image_tag(@painting.image) %>
+<br><br>
+<%= link_to('Delete', @painting, :method => :delete, :confirm => 'Can Haz Destroy Painting?') %>

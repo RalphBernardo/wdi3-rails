@@ -1,0 +1,14 @@
+<div class="container">
+  <%= link_to(@ingredient.title, @ingredient) %>
+  <br><br>
+  Cuisine: <%= @ingredient.measurement %>
+  <br><br>
+  Chef: <%= @ingredient.cost %>
+  <br><br>
+  <%= image_tag(@ingredient.image) %>
+  <br><br>
+  <%= button_to('Delete', @ingredient, :method => :delete, :confirm => 'Can Haz Destroy Ingredient?') %>
+  <%= button_to('Edit', edit_ingredient_path(@ingredient), :method => :get) %>
+  </div>
+  <br><br>
+<% end %>

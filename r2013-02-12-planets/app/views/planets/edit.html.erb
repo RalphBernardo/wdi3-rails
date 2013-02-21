@@ -1,0 +1,17 @@
+This is the EDIT PLANET page.
+<br><br>
+<form method='post' action='<%= planet_path(@planet.id) %>'>
+  Name: <input value='<%= @planet.name %>' type='text' name='planet[name]' autofocus>
+  <br><br>
+  Image: <input value='<%= @planet.image %>' type='text' name='planet[image]'>
+  <br><br>
+  Orbit: <input value='<%= @planet.orbit %>' type='text' name='planet[orbit]'>
+   <br><br>
+  Diameter: <input value='<%= @planet.diameter %>' type='text' name='planet[diameter]'>
+  <br><br>
+  Mass: <input value='<%= @planet.mass %>' type='text' name='planet[mass]'>
+  <br><br>
+  Moons: <input value='<%= @planet.moons %>' type='text' name='planet[moons]'>
+  <br><br>
+  <button>Hey, Astroman: Edit This Planet!</button>
+</form>

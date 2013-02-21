@@ -1,0 +1,17 @@
+<ol>
+  <% @books.each do |book| %>
+    <div class="container">
+      <li>
+        <ul>
+          <li><%= link_to(book.title, @book) %></li>
+          <br>
+          <li>Cuisine: <%= book.cuisine %></li>
+          <br>
+          <li>Chef: <%= book.chef %></li>
+          <br>
+          <li><%= image_tag(book.image) %></li>
+        </ul>
+      </li>
+    </div>
+  <% end %>
+</ol>

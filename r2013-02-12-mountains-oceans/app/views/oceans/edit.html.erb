@@ -1,0 +1,17 @@
+This is the EDIT OCEAN page.
+<br><br>
+<form method='post' action='<%= ocean_path(@ocean.id) %>'>
+  Name: <input value='<%= @ocean.name %>' type='text' name='ocean[name]' autofocus>
+  <br><br>
+  Image: <input value='<%= @ocean.image %>' type='text' name='ocean[image]'>
+  <br><br>
+  Total Area (sq mi): <input value='<%= @ocean.total_area %>' type='text' name='ocean[total_area]'>
+   <br><br>
+  Percent of Earth: <input value='<%= @ocean.percent_of_earth %>' type='text' name='ocean[percent_of_earth]'>
+  <br><br>
+  Max Depth (ft): <input value='<%= @ocean.max_depth %>' type='text' name='ocean[max_depth]'>
+  <br><br>
+  Etymology: <input value='<%= @ocean.etymology %>' type='text' name='ocean[etymology]'>
+  <br><br>
+  <button>Hey, Jacques Cousteau: Edit This Ocean!</button>
+</form>

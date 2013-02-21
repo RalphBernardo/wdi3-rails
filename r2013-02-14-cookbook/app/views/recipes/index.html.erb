@@ -1,0 +1,21 @@
+<ol>
+  <% @recipes.each do |recipe| %>
+    <div class="container">
+      <li>
+        <ul>
+          <li><%= link_to(recipe.name, @recipe) %></li>
+          <br>
+          <li>%= recipe.course %></li>
+          <br>
+          <li><%= recipe.cooktime %></li>
+          <br>
+          <li><%= recipe.serving_size %></li>
+          <br>
+          <li><%= recipe.instructions %></li>
+          <br>
+          <li><%= image_tag(recipe.image) %></li>
+        </ul>
+      </li>
+    </div>
+  <% end %>
+</ol>

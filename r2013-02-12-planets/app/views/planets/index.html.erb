@@ -1,0 +1,14 @@
+<strong>This is the planets index.</strong>
+<br><br>
+<% @planets.each do |planet| %>
+
+  <!--   <%= "#{planet['name']} has #{planet['moons']} moons and an orbit of #{planet['orbit']} AU."  %>-->
+
+  <!-- A better way ... -->
+  <%= link_to(planet.name, planet_path(planet.id)) %> has <%= pluralize(planet.moons, 'moon') %>.
+  <br>
+  <%= button_to('Delete', planet_delete_path(planet.id)) %>
+  <br>
+  <%= link_to('Edit', planet_edit_path(planet.id)) %>
+  <br><br>
+<% end %>

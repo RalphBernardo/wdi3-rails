@@ -1,0 +1,21 @@
+<%= form_for @ingredient do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, :autofocus => true %>
+  <br><br>
+  <%= f.label :measurement %>
+  <%= f.text_field :measurement %>
+  <br><br>
+  <%= f.label :cost %>
+  <%= f.text_field :cost %>
+  <br><br>
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+  <% Ingredient.order(:name).each do |ingredient| %>
+    <span><%= recipe.name %></span>
+    <%= check_box_tag 'recipe[ingredients_ids][]', ingredient.id, ingredient.in?(@recipe.ingredients.to_a) %>
+  <br><br>
+   <%= f.submit  %>
+
+<% end %>
+

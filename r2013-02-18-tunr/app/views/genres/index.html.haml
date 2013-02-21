@@ -1,0 +1,11 @@
+%table
+  - if @auth.present? && @auth.is_admin?
+    %tr=link_to('Add Genre', new_genre_path, :class => 'blue button')
+    - @genres.each do |genre|
+      %tr
+        %td=genre.name
+        %td=link_to('Edit', edit_genre_path(genre), :class => 'blue button')
+  - else
+    - @genres.each do |genre|
+      %tr
+        %td=genre.name

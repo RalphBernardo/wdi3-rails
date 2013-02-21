@@ -1,0 +1,15 @@
+<strong>This is the ARTISTS INDEX.</strong>
+<br><br>
+<% @artists.each do |artist| %>
+  <div class="container">
+    <ul>
+      <li><h3><%= link_to(artist.name, artist) %></h3></li>
+      <li>Nationality: <%= artist.nationality %></li>
+      <li>Date of Birth: <%= artist.dob.strftime('%B %d, %Y') %></li>
+      <li>Period: <%= artist.period %></li>
+      <li><br><%= image_tag(artist.image) %></li>
+    </ul>
+  </div>
+<% end %>
+
+<!-- Note format: artist.dob.strftime('%B %d, %Y')  -->

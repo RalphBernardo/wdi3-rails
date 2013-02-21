@@ -1,0 +1,34 @@
+<div class="container">
+  <%= link_to(@book.title, @book) %>
+  <br><br>
+  Cuisine: <%= @book.cuisine %>
+  <br><br>
+  Chef: <%= @book.chef %>
+  <br><br>
+  <%= image_tag(@book.image) %>
+  <br><br>
+  <%= button_to('Delete', @book, :method => :delete, :confirm => 'Can Haz Destroy Book?') %>
+  <%= button_to('Edit', edit_book_path(@book), :method => :get) %>
+  </div>
+  <br><br>
+
+<br><br>
+<div class="clearfix">CLEAR</div>
+<% @book.recipes.each do |recipe| %>
+  <div class="container">
+    <%= recipe.name %>
+    <br><br>
+    <%= image_tag(recipe.image) %>
+    <br><br>
+    <% recipe.ingredients.each do |ingredient| %>
+      <div class="container">
+        <%= ingredient.name %>
+        <br><br>
+        <%= image_tag(ingredient.image) %>
+        <br><br>
+        <%= button_to('Delete', @ingredient, :method => :delete, :confirm => 'Can Haz Destroy Ingredient?') %>
+<!--         <%= button_to('Edit', edit_ingredient_path(ingredient), :method => :get) %> -->
+      </div>
+    <% end %>
+  </div>
+<% end %>

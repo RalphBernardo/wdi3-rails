@@ -1,0 +1,13 @@
+<strong>This is the PAINTINGS INDEX.</strong>
+<br><br>
+<% @paintings.each do |painting| %>
+  <div class="container">
+    <ul>
+      <li><h3><%= link_to(painting.title, painting) %></h3></li>
+      <li><strong>Year Created:</strong> <%= painting.year %></li>
+      <li><strong>Medium:</strong> <%= painting.medium %></li>
+      <li><strong>Style:</strong> <%= painting.style %></li>
+      <li><br><%= image_tag(painting.image) %></li>
+    </ul>
+  </div>
+<% end %>

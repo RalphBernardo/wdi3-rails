@@ -1,0 +1,24 @@
+<%= form_for @recipe do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, :autofocus => true %>
+  <br><br>
+  <%= f.label :course %>
+  <%= f.text_field :course %>
+  <br><br>
+  <%= f.label :cooktime %>
+  <%= f.text_field :cooktime %>
+  <br><br>
+  <%= f.label :serving_size %>
+  <%= f.text_field :serving_size %>
+  <br><br>
+  <%= f.label :instructions %>
+  <%= f.text_field :instructions %>
+  <br><br>
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+  <br><br>
+   <%= f.submit  %>
+
+<% end %>
+

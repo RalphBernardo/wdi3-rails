@@ -1,0 +1,20 @@
+<header>
+  <h1>Y! Finance Get Quote</h1>
+</header>
+
+<div id="wrapper">
+
+  <form action='/stock' method='get'>
+    <input type="text" name="symbol" autofocus>
+    <button>Get Quote</button>
+  </form>
+
+  <div id="get_quote">
+    <%= @symbol %> is trading at <%= @stock_quote %> a share.
+  </div>
+
+</div>
+
+<footer></footer>
+
+
